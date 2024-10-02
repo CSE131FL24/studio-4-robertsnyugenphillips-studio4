@@ -20,5 +20,17 @@ public class InterpretDrawingFile {
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
 		
+		StdDraw.setPenColor(in.nextInt(), in.nextInt(), in.nextInt());
+		boolean isFilled=true;
+		if (in.nextBoolean()==true) {
+			isFilled=true;
+		}
+		else {
+			isFilled=false;
+		}
+		String shape = in.nextLine();
+		
+		
+		stdDraw.(in.nextDouble(),in.nextDouble(),in.nextDouble());
 	}
 }
